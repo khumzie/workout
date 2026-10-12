@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Pulse">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css">
+<title>Pulse — Your training, intelligently planned</title>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark"><span></span><span></span><span></span></div><div><div class="brand-name">pulse</div><div class="brand-sub">YOUR PERSONAL TRAINING PLAN</div></div></div>
+    <button class="icon-button" id="settingsBtn" aria-label="Settings" title="Profile and settings">⚙</button>
+  </header>
+  <main>
+    <section class="greeting">
+      <div><p class="eyebrow" id="todayLabel">TODAY'S SESSION</p><h1 id="greetingTitle">Build strength.<br><span>One day at a time.</span></h1></div>
+      <div class="streak-pill"><span class="pulse-dot"></span><span><b id="streakCount">0</b> day streak</span></div>
+    </section>
+    <section class="hero-card">
+      <div class="hero-top"><div><div class="small-label">YOUR DAILY FULL BODY</div><div class="hero-time"><strong>35</strong><span>MIN</span></div></div><div class="hero-orbit"><div class="orbit-ring"></div><div class="orbit-person">✦</div></div></div>
+      <div class="hero-bottom"><div><div class="hero-title" id="sessionName">Foundation · Day 1</div><div class="muted-light" id="sessionMeta">6 exercises · adaptive progression</div></div><button class="primary-button" id="startBtn">Start workout <span>↗</span></button></div>
+    </section>
+    <section class="metrics-grid">
+      <div class="metric-card"><div class="metric-icon lilac">↗</div><div class="metric-value" id="workoutsValue">0</div><div class="metric-label">Workouts done</div></div>
+      <div class="metric-card"><div class="metric-icon mint">◷</div><div class="metric-value" id="minutesValue">0<span class="unit">m</span></div><div class="metric-label">Training time</div></div>
+      <div class="metric-card"><div class="metric-icon peach">↗</div><div class="metric-value" id="volumeValue">0<span class="unit">kg</span></div><div class="metric-label">Weight lifted</div></div>
+    </section>
+    <section class="section-head"><div><p class="eyebrow">YOUR PLAN</p><h2>Today's workout</h2></div><button class="text-button" id="editPlanBtn">Adjust plan</button></section>
+    <div class="progress-card"><div class="progress-head"><span>Session progress</span><strong id="progressText">0 of 6 complete</strong></div><div class="progress-track"><div id="progressBar"></div></div></div>
+    <section id="exerciseList" class="exercise-list"></section>
+    <section class="section-head history-head"><div><p class="eyebrow">KEEP SHOWING UP</p><h2>Your progress</h2></div><button class="text-button" id="historyBtn">History ↗</button></section>
+    <section class="progress-summary">
+      <div class="summary-main"><div class="summary-number" id="weekCount">0/7</div><div><strong>sessions this week</strong><p class="muted">Consistency beats perfection.</p></div></div>
+      <div class="week-dots" id="weekDots"></div>
+    </section>
+    <p class="disclaimer">Pulse adapts your training from the weights and reps you log. Keep 2–3 reps in reserve, prioritise form, and take a rest day or choose a lighter session when needed.</p>
+  </main>
+  <nav class="tabbar"><button class="tab active" data-tab="today"><span>⌂</span>Today</button><button class="tab" data-tab="progress"><span>◷</span>Progress</button><button class="tab" data-tab="profile"><span>◉</span>Profile</button></nav>
+</div>
+<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-handle"></div><div class="modal-head"><div><p class="eyebrow" id="modalEyebrow">PERSONALISE PULSE</p><h2 id="modalTitle">Your training profile</h2></div><button class="icon-button close-modal" id="closeModal" aria-label="Close">×</button></div><div id="modalContent"></div></section></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
