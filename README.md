@@ -32,3 +32,10 @@ Profile, daily completion, and workout history are saved in this browser on this
 - Training loads are user-entered; progression is conservative and capped at 24 kg per dumbbell when using kg units.
 - Data is stored locally in this browser on this device. Export a JSON backup periodically; clearing browser data can erase the app's saved data.
 - The app is a workout log and planning aid, not medical advice. Stop if you feel sharp pain, and ask a qualified professional if you have relevant health concerns.
+
+
+## Real exercise demonstrations (v3)
+- Exercise guides now try to load a matching animated GIF from the open-source ExerciseGymGifsDB static library hosted on jsDelivr.
+- The guide includes numbered beginner steps and a video-search fallback if no exact GIF match is available.
+- GIFs and video searches require an internet connection; once viewed, the browser may cache some media, but offline availability of every GIF is not guaranteed.
+- Exercise GIF source: https://github.com/JahelCuadrado/ExerciseGymGifsDB (public project; see its repository for license and attribution details).
